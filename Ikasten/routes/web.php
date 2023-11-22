@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\IkasleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/',[IkasleController::class,'index' ]);
+Route::post('/gehitu',[IkasleController::class,'create']);
+Route::post('/kendu',[IkasleController::class,'kendu']);
+Route::get('/lista',[IkasleController::class, 'lista']);
+Route::post('/editatu/{id}', [IkasleController::class, 'editatu']);
+Route::post('/aldatu',[IkasleController::class,'aldatu']);
