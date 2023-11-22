@@ -9,5 +9,13 @@
             <input type="submit" value="editatu">
         </form>
     @endforeach
+    
+</div>
+<div>
+    <form action="/bilatu" method="get">
+        @csrf
+        <input type="text" name="izena" placeholder="Bilatu Izena">
+        <input type="submit" value="Bilatu">
+    </form>
 </div>
 @endsection

@@ -21,3 +21,4 @@ Route::post('/kendu',[IkasleController::class,'kendu']);
 Route::get('/lista',[IkasleController::class, 'lista']);
 Route::post('/editatu/{id}', [IkasleController::class, 'editatu']);
 Route::post('/aldatu',[IkasleController::class,'aldatu']);
+Route::get('/bilatu',[IkasleController::class,'bilatu']);

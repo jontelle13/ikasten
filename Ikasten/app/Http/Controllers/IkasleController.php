@@ -16,6 +16,17 @@ class IkasleController extends Controller
 
         return view("osoa",['ikasleak'=>$ikasleak]);
     }
+
+    public function bilatu(Request $request){
+        $izena=$request->input('izena');
+
+        $ikasleak=Ikaslea::where('izena','like',"%$izena%")
+        ->get();
+
+        return view('layouts.lista',['ikasleak'=>$ikasleak]);
+    }
+
+
     public function lista(){
         $ikasleak=Ikaslea::all();
 
